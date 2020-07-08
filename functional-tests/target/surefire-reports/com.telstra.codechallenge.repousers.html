@@ -172,33 +172,33 @@
 </div>
 <div class="step-row">
 <div class="step-cell passed">Given url microserviceUrl</div>
-<div class="time-cell passed">0.000071</div>
+<div class="time-cell passed">0.000113</div>
 </div>
 <div class="step-row">
 <div class="step-cell passed">And path 'accounts/nofollower'</div>
-<div class="time-cell passed">0.003001</div>
+<div class="time-cell passed">0.003629</div>
 </div>
 <div class="step-row">
 <div class="step-cell passed">And param count = '1'</div>
-<div class="time-cell passed">0.002822</div>
+<div class="time-cell passed">0.00341</div>
 </div>
 <div class="step-row">
 <div class="step-cell passed">When method GET</div>
-<div class="time-cell passed">3.585579</div>
+<div class="time-cell passed">3.551389</div>
 </div>
-<div class="preformatted">15:28:07.631 request:
+<div class="preformatted">16:17:24.832 request:
 1 &gt; GET http://localhost:8080/accounts/nofollower?count=1
 1 &gt; Accept-Encoding: gzip,deflate
 1 &gt; Connection: Keep-Alive
 1 &gt; Host: localhost:8080
 1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_251)
 
-15:28:10.005 response time in milliseconds: 2368.04
+16:17:27.126 response time in milliseconds: 2290.35
 1 &lt; 200
 1 &lt; Cache-Control: no-cache, no-store, max-age=0, must-revalidate
 1 &lt; Connection: keep-alive
 1 &lt; Content-Type: application/json
-1 &lt; Date: Wed, 08 Jul 2020 09:58:09 GMT
+1 &lt; Date: Wed, 08 Jul 2020 10:47:27 GMT
 1 &lt; Expires: 0
 1 &lt; Keep-Alive: timeout=60
 1 &lt; Pragma: no-cache
@@ -206,23 +206,22 @@
 1 &lt; X-Content-Type-Options: nosniff
 1 &lt; X-Frame-Options: DENY
 1 &lt; X-XSS-Protection: 1; mode=block
-[{"id":17110897,"owner":{"login":"rgoliver"},"html_url":"https://github.com/rgoliver/test"}]</div>
+[{"id":17110897,"htmlUrl":"https://github.com/rgoliver/test","login":"rgoliver"}]</div>
 <div class="step-row">
 <div class="step-cell passed">Then status 200</div>
-<div class="time-cell passed">0.000047</div>
+<div class="time-cell passed">0.000033</div>
 </div>
 <div class="step-row">
 <div class="step-cell passed">And match header Content-Type contains 'application/json'</div>
-<div class="time-cell passed">0.01577</div>
+<div class="time-cell passed">0.0347</div>
 </div>
 <div class="step-row">
 <div class="step-cell passed">And match response ==</div>
-<div class="time-cell passed">0.002734</div>
+<div class="time-cell passed">0.001959</div>
 </div>
 <div class="preformatted">[{id:'#number',
-owner:
-{login:"#string"},
-html_url:"#string"
+login:"#string",
+htmlUrl:"#string"
 }]</div>
 </div>
 </div>

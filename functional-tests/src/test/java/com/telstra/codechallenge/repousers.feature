@@ -14,9 +14,8 @@ Feature: As an api user I want to retrieve account details with zero followers
     And match response == 
     """
     [{id:'#number',
-    owner:
-    {login:"#string"},
-    html_url:"#string"
+    login:"#string",
+    htmlUrl:"#string"
     }]
     """
 

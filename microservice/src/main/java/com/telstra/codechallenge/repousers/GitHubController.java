@@ -4,11 +4,11 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import javax.validation.Valid;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-
-import com.telstra.codechallenge.repousers.RepoUser.RepoAccounts;
 
 @RestController
 public class GitHubController {
@@ -20,10 +20,11 @@ public class GitHubController {
 	}
 
 	@GetMapping(path = "/accounts/nofollower")
-	public List<RepoAccounts> getOldestAccounts(@RequestParam int count) {
-		
-		return Arrays.asList(repoUserService.getOldestAccounts(count)).stream().limit(count).collect(Collectors.toList());
-	}
+	public List<RepoAccountsDTO> getOldestAccounts(@Valid @RequestParam int count) {
 
+		return Arrays.asList(repoUserService.getOldestAccounts(count)).stream().limit(count)
+				.map(repo -> new RepoAccountsDTO(repo.getId(), repo.getHtml_url(), repo.getOwner().getLogin()))
+				.collect(Collectors.toList());
+	}
 
 }
